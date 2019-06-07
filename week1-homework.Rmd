@@ -1,0 +1,44 @@
+---
+title: "Week One Homework"
+---
+
+
+# Question One
+
+A posterior distribution with grid approximation, assuming 8 water in 15 tosses
+
+```{r}
+library(rethinking)
+toss <- function(number_of_tosses, number_of_waters, prior_probability=rep(1, 1000)) {
+  p_grid <- seq(from=0, to=1, length.out=1000)
+  prob_data <- dbinom(number_of_waters, size=number_of_tosses, prob=p_grid)
+  posterior <- prob_data * prior_probability
+  posterior / sum(posterior)
+}
+
+posterior <- toss(15, 8)
+
+plot(posterior)
+```
+
+# Question Two
+
+Same as before, but using a prior of zero below `p = 0.5` and one above `p = 0.5`.
+
+```{r}
+samples <- 1000
+half_zeroes <- rep(0, samples/2)
+half_ones <- rep(1, samples/2)
+prior <- c(half_zeroes, half_ones)
+
+posterior <- toss(15, 8, prior)
+
+plot(posterior)
+```
+
+# Question Three
+
+TBC
+
+
+

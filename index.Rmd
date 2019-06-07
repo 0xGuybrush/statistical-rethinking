@@ -1,0 +1,9 @@
+---
+title: "Statistical Rethinking"
+---
+
+My scratch pad for following along with Richard McElreath's course, [Statistical Rethinking](https://github.com/rmcelreath/statrethinking_winter2019).
+
+# Homework attempts
+
+* [Week one](week1-homework.html)

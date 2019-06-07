@@ -1,0 +1,8 @@
+name: "statistical-rethinking"
+navbar:
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Homework (attempts)"
+      href: week1-homework.html
+output_dir: "docs"
